@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,500&family=Roboto&family=Ubuntu:ital,wght@1,300&display=swap');
+ :root {
+    --themeRed: #e43a47;
+    --gray: #efefef;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*navbar css*/
+
+.header {
+    width: 100%;
+    background-color: rgba(155, 137, 137, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 2222;
+    margin: 0px 0px;
+    padding: 8px 38px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 300px;
+    top: 0;
+}
+
+.banner .logos .logo {
+    padding: 4px 0;
+    height: 75px;
+}
+
+.banner .logos .logo img {
+    height: 100%;
+    margin: 20px 147px;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin: -10px 10px;
+    padding: 10px 10px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header nav ul li a:hover {
+    background-color: var(--themeRed);
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #c94bec, #3fbfea);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    outline-color: white;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: aliceblue;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: white;
+}
+
+.input-box ion-icon {
+    position: absolute;
+    right: 8px;
+    color: aliceblue;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget label a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Resposive website*/
+
+@media screen and(max-width:1140px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and(max-width :1000px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+    #getInTouchSection .cards {
+        justify-content: space-around;
+        height: auto;
+    }
+    #getInTouchSection .cards>div {
+        margin: 10px 0;
+    }
+}
+
+@media screen and(max-width:1024px) {
+    .banner {
+        background-position-x: 45%;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .header nav {
+        position: relative;
+        border: 2px solid #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .header nav :after {
+        top: 17px;
+    }
+    .header nav :before {
+        top: 7px;
+    }
+    .header nav :after,
+    .header nav :before {
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+    .header nav li {
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .header nav:hover ul {
+        right: 0;
+    }
+    .header nav ul li {
+        display: block;
+    }
+    .header nav ul li a {
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .banner {
+        background-position-x: 65%;
+    }
+    .banner p {
+        font-size: 14px;
+    }
+    .banner p,
+    .banner h1 {
+        width: 70%;
+    }
+    #getInTouchSection .cards>div:hover {
+        width: 350px;
+    }
+}
+
+@media screen and(max-width :425px) {
+    .banner h1 {
+        margin-top: 150px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .banner button {
+        margin-bottom: 10px;
+    }
+    #getInTouchSection p {
+        text-align: justify;
+    }
+    #getInTouchSection .cards>div :hover {
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+}

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,500&family=Roboto&family=Ubuntu:ital,wght@1,300&display=swap');
+ :root {
+    --themeRed: #e43a47;
+    --gray: #efefef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #e1c2b9, #63a6d2, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/*NAvbar CSS Starts here*/
+
+.header {
+    width: 100%;
+    background-color: rgba(155, 137, 137, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 2222;
+    margin: 0px 0px;
+    padding: 8px 38px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 300px;
+    top: 0;
+}
+
+.banner .logos .logo {
+    padding: 4px 0;
+    height: 75px;
+}
+
+.banner .logos .logo img {
+    height: 100%;
+    margin: 20px 147px;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin: -10px 10px;
+    padding: 10px 10px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: rgb(233, 227, 227);
+}
+
+.header nav ul li a:hover {
+    background-color: var(--themeRed);
+}
+
+
+/*NAvbar CSS ends here*/
+
+.sectionTitle {
+    width: 300px;
+    /* border-bottom: 3px solid var(--themeRed); */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(70, 68, 68);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(70, 68, 68);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: rgb(37, 116, 161);
+    color: white;
+    padding: 12px 251px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: rgb(37, 116, 161);
+}
+
+.container2 {
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    margin: 69px 240px;
+    padding: 24px 28px;
+}
+
+.container2 input[type=email] {
+    background: transparent;
+}
+
+.container2 input[type=text] {
+    background: transparent;
+}
+
+.container2 textarea {
+    background: transparent;
+}
+
+.container2 select {
+    background: transparent;
+}
+
+.col_25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col_75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
